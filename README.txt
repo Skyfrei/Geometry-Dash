@@ -1,27 +1,18 @@
-Credits@:
+This is my first ever coded game on Godot game engine, it was surprisingly a really pleaseant project, I had a lot of fun coding it
+and also learned a lot of new stuff such as:
 
-Sprites:
+<b>Collision
+Sprites
+Usage of vectors in game deving
+Debugging
+Finding how people can bug the game and how that affects the game
+Level design / Level theme
+Challenging the player via map patterns
+</b>
 
-  Are community made and requested for usage. All of them can be found
-online.
+This was overall a really nice experience, and more than anything i enjoyed talking to the Godot community in Discord, they were really helpful and provided links whenever needed. Also absolutely love the documentation of the game engine
 
-Background images:
-  
-  Users weren't found in pinterest, i will add credits if the artists
-find the game and want to be credited.
+If you want this game to be updated, you can contact me in here or in my
 
-Song: 
-
-  NASA -> Cesqeaux & Todd Helder
-
-
-Designer can be contacted via:
-
- Discord -> MaxxBurn#5098
- 
- Twitter -> MaxxBurnXD
-
-More projects of the author can be found:
-
- GitHub -> https://github.com/MaxxBurn
-
+Discord: MaxxBurn#5098
+Twitter: @MaxxBurnXD
