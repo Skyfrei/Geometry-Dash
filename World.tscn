@@ -1,0 +1,204 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://LevelComplete.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Tiles.tres" type="TileSet" id=3]
+[ext_resource path="res://NASA.wav" type="AudioStream" id=4]
+[ext_resource path="res://World.gd" type="Script" id=5]
+[ext_resource path="res://Trampoline.gd" type="Script" id=6]
+[ext_resource path="res://Sprites/Tiles/Dodge.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/Tiles/Trampoline.png" type="Texture" id=8]
+[ext_resource path="res://Spike1.gd" type="Script" id=9]
+[ext_resource path="res://Sprites/Spikes2.png" type="Texture" id=10]
+[ext_resource path="res://MetalSpike1.gd" type="Script" id=11]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+[sub_resource type="RectangleShape2D" id=2]
+
+[sub_resource type="RectangleShape2D" id=3]
+
+[node name="World" type="Node2D"]
+script = ExtResource( 5 )
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 3 )
+cell_size = Vector2( 35, 35 )
+format = 1
+tile_data = PoolIntArray( 131127, 2, 0, 131128, 2, 0, 131129, 2, 0, 131130, 2, 0, 131131, 2, 0, 131132, 2, 0, 131133, 2, 0, 131134, 2, 0, 131135, 2, 0, 131136, 2, 0, 131137, 2, 0, 131138, 2, 0, 131139, 2, 0, 131140, 2, 0, 131141, 2, 0, 131142, 2, 0, 131143, 2, 0, 131144, 2, 0, 196663, 2, 0, 196664, 2, 0, 196665, 2, 0, 196666, 2, 0, 196667, 2, 0, 196668, 2, 0, 196669, 2, 0, 196670, 2, 0, 196671, 2, 0, 196672, 2, 0, 196673, 2, 0, 196674, 2, 0, 196675, 2, 0, 196676, 2, 0, 196677, 2, 0, 196678, 2, 0, 196679, 2, 0, 196680, 2, 0, 262199, 2, 0, 262200, 2, 0, 327732, 2, 0, 327733, 2, 0, 327734, 2, 0, 327735, 2, 0, 327736, 2, 0, 393245, 2, 0, 393246, 2, 0, 393247, 2, 0, 393248, 2, 0, 393249, 2, 0, 393250, 2, 0, 393251, 2, 0, 393252, 2, 0, 393253, 2, 0, 393275, 2, 0, 393276, 2, 0, 393277, 2, 0, 393278, 2, 0, 393279, 2, 0, 458752, 0, 0, 458753, 2, 0, 458754, 2, 0, 458755, 2, 0, 458756, 2, 0, 458757, 2, 0, 458758, 2, 0, 458759, 2, 0, 458760, 2, 0, 458761, 2, 0, 458762, 2, 0, 458763, 2, 0, 458764, 2, 0, 458765, 2, 0, 458766, 2, 0, 458767, 2, 0, 458768, 2, 0, 458769, 2, 0, 458770, 2, 0, 458771, 2, 0, 458772, 2, 0, 458781, 2, 0, 458788, 2, 0, 458789, 2, 0, 524308, 2, 0, 524309, 2, 0, 524310, 2, 0, 524311, 2, 0, 524312, 2, 0, 524313, 2, 0, 524314, 2, 0, 524315, 2, 0, 524316, 2, 0, 524317, 2, 0, 524324, 2, 0, 524325, 2, 0, 524338, 2, 0, 524339, 2, 0, 524340, 2, 0, 524341, 2, 0, 524342, 2, 0, 524343, 2, 0, 524344, 2, 0, 589860, 2, 0, 589861, 2, 0, 589874, 2, 0, 589875, 2, 0, 589876, 2, 0, 589877, 2, 0, 589878, 2, 0, 589879, 2, 0, 589880, 2, 0, 589881, 2, 0, 589882, 2, 0, 589886, 2, 0, 589887, 2, 0, 589888, 2, 0, 655396, 2, 0, 655397, 2, 0, 655405, 2, 0, 655406, 2, 0, 655407, 2, 0, 655408, 2, 0, 655409, 2, 0, 655410, 2, 0, 655411, 2, 0, 655418, 2, 0, 655419, 2, 0, 655420, 2, 0, 655421, 2, 0, 655422, 2, 0, 720932, 2, 0, 720933, 2, 0, 720941, 2, 0, 720942, 2, 0, 720943, 2, 0, 720944, 2, 0, 720945, 2, 0, 720946, 2, 0, 720947, 2, 0, 786468, 2, 0, 786469, 2, 0, 786470, 2, 0, 786471, 2, 0, 786472, 2, 0, 786473, 2, 0, 786476, 2, 0, 786477, 2, 0, 786478, 2, 0, 852004, 2, 0, 852005, 2, 0, 852006, 2, 0, 852007, 2, 0, 852008, 2, 0, 852009, 2, 0, 852013, 2, 0, 852014, 2, 0, 917544, 2, 0, 917545, 2, 0, 917546, 2, 0, 917547, 2, 0, 917548, 2, 0, 917549, 2, 0, 917550, 2, 0, 983080, 2, 0, 983081, 2, 0, 983082, 2, 0, 983083, 2, 0, 983084, 2, 0, 983085, 2, 0, 983086, 2, 0 )
+
+[node name="Area2D" parent="." instance=ExtResource( 2 )]
+position = Vector2( 2529.48, 42.3061 )
+world_scene = "res://World2.tscn"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+volume_db = -20.0
+
+[node name="Label" type="Label" parent="."]
+margin_left = 255.896
+margin_top = 144.06
+margin_right = 328.896
+margin_bottom = 158.06
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 0
+text = "J     U    M     P    !!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Trampoline" type="Area2D" parent="."]
+position = Vector2( 1798.52, 211.566 )
+script = ExtResource( 6 )
+
+[node name="Sprite" type="Sprite" parent="Trampoline"]
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Trampoline"]
+position = Vector2( 0, 4.76135 )
+scale = Vector2( 1, 0.4 )
+shape = SubResource( 1 )
+
+[node name="Spikes" type="Node" parent="."]
+
+[node name="Spike1" type="Area2D" parent="Spikes"]
+position = Vector2( 1214.5, 173.366 )
+script = ExtResource( 9 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Spikes/Spike1"]
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 7 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/Spike1"]
+scale = Vector2( 0.8, 3.8 )
+shape = SubResource( 2 )
+
+[node name="Spike2" type="Area2D" parent="Spikes"]
+position = Vector2( 690.77, 211.566 )
+script = ExtResource( 9 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Spikes/Spike2"]
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 7 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/Spike2"]
+scale = Vector2( 0.8, 3.8 )
+shape = SubResource( 2 )
+
+[node name="Spike3" type="Area2D" parent="Spikes"]
+position = Vector2( 414.654, 211.566 )
+script = ExtResource( 9 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Spikes/Spike3"]
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 7 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/Spike3"]
+scale = Vector2( 0.8, 3.8 )
+shape = SubResource( 2 )
+
+[node name="Spike4" type="Area2D" parent="Spikes"]
+position = Vector2( 957.927, 244.228 )
+script = ExtResource( 9 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Spikes/Spike4"]
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 7 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/Spike4"]
+scale = Vector2( 0.8, 3.8 )
+shape = SubResource( 2 )
+
+[node name="Spike5" type="Area2D" parent="Spikes"]
+position = Vector2( 2392.91, 25.6642 )
+script = ExtResource( 9 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Spikes/Spike5"]
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 7 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/Spike5"]
+scale = Vector2( 0.8, 3.8 )
+shape = SubResource( 2 )
+
+[node name="MetalSpike1" type="Area2D" parent="Spikes"]
+position = Vector2( 1745.48, 319.362 )
+rotation = -1.56462
+script = ExtResource( 11 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/MetalSpike1"]
+scale = Vector2( 3.3, 1.4 )
+shape = SubResource( 3 )
+
+[node name="Sprite" type="Sprite" parent="Spikes/MetalSpike1"]
+scale = Vector2( 0.2, 0.3 )
+texture = ExtResource( 10 )
+
+[node name="MetalSpike2" type="Area2D" parent="Spikes"]
+position = Vector2( 1414.43, 409.556 )
+script = ExtResource( 11 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/MetalSpike2"]
+scale = Vector2( 5, 1.4 )
+shape = SubResource( 3 )
+
+[node name="Sprite" type="Sprite" parent="Spikes/MetalSpike2"]
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 10 )
+
+[node name="MetalSpike3" type="Area2D" parent="Spikes"]
+position = Vector2( 1529.75, 484.366 )
+script = ExtResource( 11 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/MetalSpike3"]
+scale = Vector2( 5, 1.4 )
+shape = SubResource( 3 )
+
+[node name="Sprite" type="Sprite" parent="Spikes/MetalSpike3"]
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 10 )
+
+[node name="MetalSpike4" type="Area2D" parent="Spikes"]
+position = Vector2( 2226.14, -40.5974 )
+rotation = -1.57011
+script = ExtResource( 11 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Spikes/MetalSpike4"]
+scale = Vector2( 5, 1.4 )
+shape = SubResource( 3 )
+
+[node name="Sprite" type="Sprite" parent="Spikes/MetalSpike4"]
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 10 )

@@ -1,0 +1,479 @@
+[gd_scene load_steps=21 format=2]
+
+[ext_resource path="res://Tiles.tres" type="TileSet" id=1]
+[ext_resource path="res://LevelComplete.tscn" type="PackedScene" id=2]
+[ext_resource path="res://NASA.wav" type="AudioStream" id=3]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=4]
+[ext_resource path="res://World2.gd" type="Script" id=5]
+[ext_resource path="res://Sprites/NeededMetal.jpg" type="Texture" id=6]
+[ext_resource path="res://Sprites/Trampoline2.png" type="Texture" id=7]
+[ext_resource path="res://Trampoline2.gd" type="Script" id=8]
+[ext_resource path="res://Sprites/Laser.png" type="Texture" id=9]
+[ext_resource path="res://Laser.gd" type="Script" id=10]
+[ext_resource path="res://Sprites/YellowLaser.png" type="Texture" id=11]
+[ext_resource path="res://Sprites/laserSpikes.png" type="Texture" id=12]
+
+[sub_resource type="ConvexPolygonShape2D" id=1]
+points = PoolVector2Array( 0, 3.05176e-05, 75, 3.05176e-05, 75, 75, 0, 75 )
+
+[sub_resource type="ConvexPolygonShape2D" id=2]
+points = PoolVector2Array( 3.05176e-05, 3.05176e-05, 75, 3.05176e-05, 75, 75, 3.05176e-05, 75 )
+
+[sub_resource type="ConvexPolygonShape2D" id=3]
+points = PoolVector2Array( 1.52588e-05, 3.05176e-05, 74, 3.05176e-05, 74, 75, 1.52588e-05, 75 )
+
+[sub_resource type="ConvexPolygonShape2D" id=4]
+points = PoolVector2Array( 3.05176e-05, 6.10352e-05, 100, 6.10352e-05, 100, 125, 3.05176e-05, 125 )
+
+[sub_resource type="TileSet" id=5]
+0/name = "NeededMetal.jpg 0"
+0/texture = ExtResource( 6 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 25, 375, 75, 75 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape = SubResource( 1 )
+0/shape_one_way = false
+0/shape_one_way_margin = 1.0
+0/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 1 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+0/z_index = 0
+1/name = "NeededMetal.jpg 1"
+1/texture = ExtResource( 6 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 60, 380, 20, 20 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
+2/name = "NeededMetal.jpg 2"
+2/texture = ExtResource( 6 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 300, 475, 75, 75 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape = SubResource( 2 )
+2/shape_one_way = false
+2/shape_one_way_margin = 1.0
+2/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 2 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+2/z_index = 0
+3/name = "NeededMetal.jpg 3"
+3/texture = ExtResource( 6 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 200, 475, 74, 75 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape = SubResource( 3 )
+3/shape_one_way = false
+3/shape_one_way_margin = 1.0
+3/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 3 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+3/z_index = 0
+4/name = "NeededMetal.jpg 4"
+4/texture = ExtResource( 6 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 425, 600, 100, 125 )
+4/tile_mode = 0
+4/occluder_offset = Vector2( 0, 0 )
+4/navigation_offset = Vector2( 0, 0 )
+4/shape_offset = Vector2( 0, 0 )
+4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+4/shape = SubResource( 4 )
+4/shape_one_way = false
+4/shape_one_way_margin = 1.0
+4/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 4 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+4/z_index = 0
+
+[sub_resource type="RectangleShape2D" id=6]
+
+[sub_resource type="RectangleShape2D" id=7]
+
+[sub_resource type="CapsuleShape2D" id=8]
+
+[node name="World2" type="Node"]
+script = ExtResource( 5 )
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 34, 34 )
+format = 1
+
+[node name="Player" parent="." instance=ExtResource( 4 )]
+
+[node name="Area2D" parent="." instance=ExtResource( 2 )]
+position = Vector2( 3291.46, 242.456 )
+world_scene = "res://World.tscn"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+volume_db = -20.0
+
+[node name="MetalBlocks" type="TileMap" parent="."]
+tile_set = SubResource( 5 )
+cell_size = Vector2( 25, 25 )
+format = 1
+tile_data = PoolIntArray( 63, 0, 0, 66, 0, 0, 69, 0, 0, 72, 0, 0, 75, 0, 0, 78, 0, 0, 81, 0, 0, 84, 0, 0, 87, 0, 0, 196637, 0, 0, 196640, 0, 0, 196643, 0, 0, 196646, 0, 0, 196649, 0, 0, 196652, 0, 0, 196655, 0, 0, 196662, 0, 0, 196665, 0, 0, 196668, 0, 0, 720896, 0, 0, 720899, 0, 0, 720902, 0, 0, 720905, 0, 0, 720908, 0, 0, 720911, 0, 0, 720914, 0, 0, 720917, 0, 0, 720920, 0, 0, 720923, 0, 0, 721017, 0, 0, 721020, 0, 0, 721023, 0, 0, 721026, 0, 0, 917531, 0, 0, 917574, 0, 0, 917577, 0, 0, 917580, 0, 0, 917583, 0, 0, 917586, 0, 0, 917589, 0, 0, 917592, 0, 0, 917595, 0, 0, 917598, 0, 0, 917601, 0, 0, 917604, 0, 0, 917607, 0, 0, 917610, 0, 0, 917613, 0, 0, 917616, 0, 0, 917619, 0, 0, 917622, 0, 0, 917625, 0, 0, 1114139, 0, 0, 1114182, 0, 0, 1310747, 0, 0, 1310790, 0, 0, 1507355, 0, 0, 1507358, 0, 0, 1507361, 0, 0, 1507364, 0, 0, 1507367, 0, 0, 1507370, 0, 0, 1507373, 0, 0, 1507376, 0, 0, 1507379, 0, 0, 1507382, 0, 0, 1507385, 0, 0, 1507392, 0, 0, 1507395, 0, 0, 1507398, 0, 0 )
+
+[node name="Tramps" type="Node" parent="."]
+
+[node name="Area2D2" type="Area2D" parent="Tramps"]
+position = Vector2( 694.347, 154.404 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Tramps/Area2D2"]
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 7 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tramps/Area2D2"]
+scale = Vector2( 2.4, 1.88 )
+shape = SubResource( 6 )
+
+[node name="Area2D3" type="Area2D" parent="Tramps"]
+position = Vector2( 1722.79, 482.254 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Tramps/Area2D3"]
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 7 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tramps/Area2D3"]
+scale = Vector2( 2.4, 1.88 )
+shape = SubResource( 6 )
+
+[node name="Area2D4" type="Area2D" parent="Tramps"]
+position = Vector2( 1052.12, 56.4574 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Tramps/Area2D4"]
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 7 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tramps/Area2D4"]
+scale = Vector2( 2.4, 1.88 )
+shape = SubResource( 6 )
+
+[node name="PlayerDed" type="Node" parent="."]
+
+[node name="Area2D" type="Area2D" parent="PlayerDed"]
+position = Vector2( 1243.91, 561.597 )
+script = ExtResource( 10 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDed/Area2D"]
+scale = Vector2( 5, 1.1 )
+shape = SubResource( 7 )
+
+[node name="Sprite" type="Sprite" parent="PlayerDed/Area2D"]
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 9 )
+
+[node name="Area2D3" type="Area2D" parent="PlayerDed"]
+position = Vector2( 932.087, 411.988 )
+script = ExtResource( 10 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDed/Area2D3"]
+rotation = 1.5708
+scale = Vector2( 5, 1.1 )
+shape = SubResource( 7 )
+
+[node name="Sprite" type="Sprite" parent="PlayerDed/Area2D3"]
+rotation = 1.5708
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 11 )
+
+[node name="Area2D2" type="Area2D" parent="PlayerDed"]
+position = Vector2( 347.288, 258.156 )
+script = ExtResource( 10 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDed/Area2D2"]
+scale = Vector2( 5, 1.1 )
+shape = SubResource( 7 )
+
+[node name="Sprite" type="Sprite" parent="PlayerDed/Area2D2"]
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 9 )
+
+[node name="Vertical1" type="Area2D" parent="PlayerDed"]
+position = Vector2( 1939.95, 309.332 )
+script = ExtResource( 10 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="PlayerDed/Vertical1"]
+rotation = 1.5708
+scale = Vector2( 0.18, 0.15 )
+texture = ExtResource( 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDed/Vertical1"]
+rotation = 1.5708
+scale = Vector2( 4.3, 1.1 )
+shape = SubResource( 7 )
+
+[node name="Vertical9" type="Area2D" parent="PlayerDed"]
+position = Vector2( 2990.98, 339.509 )
+script = ExtResource( 10 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="PlayerDed/Vertical9"]
+scale = Vector2( 0.15, 0.15 )
+texture = ExtResource( 11 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDed/Vertical9"]
+scale = Vector2( 3.5, 1.1 )
+shape = SubResource( 7 )
+
+[node name="Vertical2" type="Area2D" parent="PlayerDed"]
+position = Vector2( 1563.22, 37.2574 )
+script = ExtResource( 10 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="PlayerDed/Vertical2"]
+rotation = 1.5708
+scale = Vector2( 0.18, 0.15 )
+texture = ExtResource( 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDed/Vertical2"]
+rotation = 1.5708
+scale = Vector2( 4.3, 1.1 )
+shape = SubResource( 7 )
+
+[node name="Vertical3" type="Area2D" parent="PlayerDed"]
+position = Vector2( 2010.86, -43.629 )
+script = ExtResource( 10 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="PlayerDed/Vertical3"]
+rotation = 1.5708
+scale = Vector2( 0.18, 0.15 )
+texture = ExtResource( 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDed/Vertical3"]
+rotation = 1.5708
+scale = Vector2( 4.3, 1.1 )
+shape = SubResource( 7 )
+
+[node name="Vertical4" type="Area2D" parent="PlayerDed"]
+position = Vector2( 1722.79, -109.647 )
+script = ExtResource( 10 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="PlayerDed/Vertical4"]
+scale = Vector2( 0.18, 0.15 )
+texture = ExtResource( 11 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDed/Vertical4"]
+scale = Vector2( 4.3, 1.1 )
+shape = SubResource( 7 )
+
+[node name="Vertical5" type="Area2D" parent="PlayerDed"]
+position = Vector2( 2263.92, 309.332 )
+script = ExtResource( 10 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="PlayerDed/Vertical5"]
+rotation = 1.5708
+scale = Vector2( 0.18, 0.15 )
+texture = ExtResource( 11 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDed/Vertical5"]
+rotation = 1.5708
+scale = Vector2( 4.3, 1.1 )
+shape = SubResource( 7 )
+
+[node name="Vertical6" type="Area2D" parent="PlayerDed"]
+position = Vector2( 2535.06, 210.456 )
+script = ExtResource( 10 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="PlayerDed/Vertical6"]
+scale = Vector2( 0.17, 0.25 )
+texture = ExtResource( 12 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDed/Vertical6"]
+rotation = 1.5708
+scale = Vector2( 5.6, 1.3 )
+shape = SubResource( 7 )
+
+[node name="Vertical14" type="Area2D" parent="PlayerDed"]
+position = Vector2( 2715.4, 316.873 )
+script = ExtResource( 10 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="PlayerDed/Vertical14"]
+rotation = 4.01426
+scale = Vector2( 0.17, 0.25 )
+texture = ExtResource( 12 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDed/Vertical14"]
+rotation = 2.44346
+scale = Vector2( 5.9, 0.55 )
+shape = SubResource( 8 )
+
+[node name="Vertical7" type="Area2D" parent="PlayerDed"]
+position = Vector2( 2563.38, 210.456 )
+script = ExtResource( 10 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="PlayerDed/Vertical7"]
+scale = Vector2( 0.17, 0.25 )
+texture = ExtResource( 12 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDed/Vertical7"]
+rotation = 1.5708
+scale = Vector2( 5.6, 1.3 )
+shape = SubResource( 7 )
+
+[node name="Vertical11" type="Area2D" parent="PlayerDed"]
+position = Vector2( 2591.24, 210.456 )
+script = ExtResource( 10 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="PlayerDed/Vertical11"]
+scale = Vector2( 0.17, 0.25 )
+texture = ExtResource( 12 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDed/Vertical11"]
+rotation = 1.5708
+scale = Vector2( 5.6, 1.3 )
+shape = SubResource( 7 )
+
+[node name="Vertical12" type="Area2D" parent="PlayerDed"]
+position = Vector2( 2618.44, 210.456 )
+script = ExtResource( 10 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="PlayerDed/Vertical12"]
+scale = Vector2( 0.17, 0.25 )
+texture = ExtResource( 12 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDed/Vertical12"]
+rotation = 1.5708
+scale = Vector2( 5.6, 1.3 )
+shape = SubResource( 7 )
+
+[node name="Vertical13" type="Area2D" parent="PlayerDed"]
+position = Vector2( 2645.64, 210.456 )
+script = ExtResource( 10 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="PlayerDed/Vertical13"]
+scale = Vector2( 0.17, 0.25 )
+texture = ExtResource( 12 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDed/Vertical13"]
+rotation = 1.5708
+scale = Vector2( 5.6, 1.3 )
+shape = SubResource( 7 )
+
+[node name="Vertical8" type="Area2D" parent="PlayerDed"]
+position = Vector2( 891.506, -43.629 )
+script = ExtResource( 10 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="PlayerDed/Vertical8"]
+scale = Vector2( 0.17, 0.25 )
+texture = ExtResource( 12 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDed/Vertical8"]
+rotation = 1.5708
+scale = Vector2( 5.6, 1.3 )
+shape = SubResource( 7 )
+
+[node name="Vertical10" type="Area2D" parent="PlayerDed"]
+position = Vector2( 3131.14, 154.404 )
+script = ExtResource( 10 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="PlayerDed/Vertical10"]
+scale = Vector2( 0.17, 0.25 )
+texture = ExtResource( 12 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDed/Vertical10"]
+rotation = 1.5708
+scale = Vector2( 5.6, 1.3 )
+shape = SubResource( 7 )
