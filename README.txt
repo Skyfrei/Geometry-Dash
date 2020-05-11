@@ -1,7 +1,8 @@
 This is my first ever coded game on Godot game engine, it was surprisingly a really pleaseant project, I had a lot of fun coding it
 and also learned a lot of new stuff such as:
 
-<b>Collision
+<b>
+Collision
 Sprites
 Usage of vectors in game deving
 Debugging
